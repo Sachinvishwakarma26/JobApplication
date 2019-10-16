@@ -1,0 +1,859 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "infinity labs",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": [
+                        "fallback"
+                    ]
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "cancel"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": [
+                        "yes"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": [
+                        "no"
+                    ]
+                },
+                {
+                    "name": "RouterinformationIntent",
+                    "slots": [],
+                    "samples": [
+                        "i want to check routers",
+                        "i want to check packages",
+                        "i want to check neds",
+                        "i want to check running packages",
+                        "i want to check running routers",
+                        "i want to check running neds",
+                        "i want to know about neds",
+                        "i want to know about routers",
+                        "i want to know about packages",
+                        "yes i want to know about neds",
+                        "yes i want to know about routers"
+                    ]
+                },
+                {
+                    "name": "ServicesinformationIntent",
+                    "slots": [],
+                    "samples": [
+                        "I want to know running services",
+                        "i want to know current running serivces",
+                        "i want to know services",
+                        "I want to check running services",
+                        "i want to check current running serivces",
+                        "i want to check services",
+                        "yes I want to check current services",
+                        "yes i want to check current running serivces",
+                        "yes i want to check services"
+                    ]
+                },
+                {
+                    "name": "DeviceinformationIntent",
+                    "slots": [],
+                    "samples": [
+                        "i want to check current devices",
+                        "i want to know current devices",
+                        "i want to check current available devices",
+                        "i want to know devices",
+                        "i want to check devices",
+                        "i want to check current available device",
+                        "i want to know device",
+                        "i want to check device"
+                    ]
+                },
+                {
+                    "name": "CancelSubscriptionIntent",
+                    "slots": [],
+                    "samples": [
+                        "Cancel all access pack",
+                        "cancel all access subscription",
+                        "cancel subscription",
+                        "cancel all access"
+                    ]
+                },
+                {
+                    "name": "CreateserviceIntent",
+                    "slots": [],
+                    "samples": [
+                        "please create a new service",
+                        "create a new service",
+                        "i want to create new service",
+                        "i want to create service"
+                    ]
+                },
+                {
+                    "name": "ServiceNameIntent",
+                    "slots": [
+                        {
+                            "name": "Service_name",
+                            "type": "AMAZON.FirstName",
+                            "samples": [
+                                "{Service_name}"
+                            ]
+                        },
+                        {
+                            "name": "device_name",
+                            "type": "AMAZON.PostalAddress",
+                            "samples": [
+                                "{device_name}"
+                            ]
+                        },
+                        {
+                            "name": "ip_address",
+                            "type": "AMAZON.PostalAddress",
+                            "samples": [
+                                "{ip_address}"
+                            ]
+                        },
+                        {
+                            "name": "pw_id",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{pw_id}"
+                            ]
+                        },
+                        {
+                            "name": "interface_number",
+                            "type": "AMAZON.PostalAddress",
+                            "samples": [
+                                "{interface_number}"
+                            ]
+                        },
+                        {
+                            "name": "device_no",
+                            "type": "AMAZON.PostalAddress",
+                            "samples": [
+                                "{device_no}"
+                            ]
+                        },
+                        {
+                            "name": "loopback_ip",
+                            "type": "AMAZON.PostalAddress",
+                            "samples": [
+                                "{loopback_ip}"
+                            ]
+                        },
+                        {
+                            "name": "interface_no",
+                            "type": "AMAZON.PostalAddress",
+                            "samples": [
+                                "{interface_no}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{device_no}",
+                        "destination device number {device_no}",
+                        "source device name is {device_name}",
+                        "device is {device_name}",
+                        "my source device name is {device_name}",
+                        "{device_name}",
+                        "ip address is {ip_address}",
+                        "{ip_address}",
+                        "remote ip address is {ip_address}",
+                        "destination is {interface_no}",
+                        "destination number is {interface_no}",
+                        "destination interface number is {interface_no}",
+                        "soruce interface number is {interface_number}",
+                        "interface number is {interface_number}",
+                        "interface number {interface_number}",
+                        "{interface_number}",
+                        "remote interface number is {interface_number}",
+                        "loopback ip is {loopback_ip}",
+                        "{loopback_ip}",
+                        "my pw-id is {pw_id}",
+                        "{pw_id}",
+                        "pw-id is {pw_id}",
+                        "service is {Service_name}",
+                        "service name is {Service_name}",
+                        "my service name is {Service_name}",
+                        "{Service_name}"
+                    ]
+                },
+                {
+                    "name": "DeleteserviceIntent",
+                    "slots": [
+                        {
+                            "name": "delete_service",
+                            "type": "AMAZON.FirstName",
+                            "samples": [
+                                "my service name is {delete_service}",
+                                "{delete_service}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "i want to delete service"
+                    ]
+                },
+                {
+                    "name": "SddevdeviceinfoIntent",
+                    "slots": [],
+                    "samples": [
+                        "show my active device",
+                        "check my running devices",
+                        "my active devices",
+                        "my active device",
+                        "my running device",
+                        "my devices",
+                        "check my running device",
+                        "I WANT TO KNOW MY SD DEV DEVICES",
+                        "MY ALL DEVICES",
+                        "WHAT ARE MY DEVICES",
+                        "SHOW MY DEVICES",
+                        "S D DEV DEVICES INFORMATION",
+                        "S D DEV DEVICE INFO",
+                        "S D DEV DEVICES INFO",
+                        "I WANT TO KNOW S D DEV DEVICES INFO",
+                        "I WANT TO KNOW S D DEV DEVICE INFO",
+                        "i want to know about sddev device",
+                        "i want to know about sddev devices",
+                        "what are sddev devices",
+                        "what are sddev device ",
+                        "sddev device numbers",
+                        "i want to know sddev device",
+                        "sddev device information",
+                        "sddev device info",
+                        "i want to know about sddev device info"
+                    ]
+                },
+                {
+                    "name": "SddevsitesinfoIntent",
+                    "slots": [],
+                    "samples": [
+                        "show my active sites",
+                        "my active dites",
+                        "my sites",
+                        "WHAT ARE MY SITES",
+                        "SHOW ALL MY SITES",
+                        "SHOW MY SITES",
+                        "S D DEV SITES INFORMATION",
+                        "S D DEV SITES INFO",
+                        "I WANT TO KNOW S D DEV SITE",
+                        "I WANT TO KNOW S D DEV SITES",
+                        "I WANT TO KNOW S D DEV SITES INFORMATION",
+                        "I WANT TO KNOW S D DEV SITES INFO",
+                        "i wan to know sddev sites info",
+                        "what are sddev site",
+                        "what are sddev sites",
+                        "sddev sites info",
+                        "sddev sites information",
+                        "i want to know about sddev sites information",
+                        "i want to know about sddev sites info"
+                    ]
+                },
+                {
+                    "name": "SddevpidinfoIntent",
+                    "slots": [],
+                    "samples": [
+                        "show my purchased license",
+                        "my purchased license",
+                        "show my purchased license count",
+                        "my active license",
+                        "check my active license",
+                        "show my all purchase licenses",
+                        "show my purchased licenses"
+                    ]
+                },
+                {
+                    "name": "SddevuserinfoIntent",
+                    "slots": [],
+                    "samples": [
+                        "show my active users",
+                        "active users",
+                        "my active users",
+                        "i want to know my registered users",
+                        "list of users",
+                        "show my company users",
+                        "show my all users",
+                        "I WANT TO KNOW S D DEV USERS INFORMATION",
+                        "I WANT TO KNOW S D DEV USER INFORMATION",
+                        "I WANT TO KNOW S D DEV USERS INFO",
+                        "I WANT TO KNOW S D DEV USER INFO",
+                        "S D DEV USERS INFO",
+                        "can i know sddev user info",
+                        "can i know sddev user information",
+                        "i want to know how much users are log in sddev",
+                        "i want to know sddev user numbers",
+                        "i want to know sddev users",
+                        "sddev user"
+                    ]
+                },
+                {
+                    "name": "SddevactivelicenseinfoIntent",
+                    "slots": [],
+                    "samples": [
+                        "active purchased license",
+                        "running purchased license",
+                        "active license",
+                        "running license"
+                    ]
+                },
+                {
+                    "name": "SddevinterfaceinfoIntent",
+                    "slots": [],
+                    "samples": [
+                        "show my active interfaces",
+                        "check my active interfaces",
+                        "active interfaces",
+                        "active interface",
+                        "show interfaces",
+                        "what are my interfaces"
+                    ]
+                },
+                {
+                    "name": "SddevdevicestatusinfoIntent",
+                    "slots": [],
+                    "samples": [
+                        "is my device installed",
+                        "is device installed",
+                        "show my installation detail"
+                    ]
+                },
+                {
+                    "name": "SddevdevicedetailinfoIntent",
+                    "slots": [],
+                    "samples": [
+                        "show my device activation status",
+                        "check my device status"
+                    ]
+                },
+                {
+                    "name": "SddevdevicelicenseinfoIntent",
+                    "slots": [
+                        {
+                            "name": "serialNumber",
+                            "type": "AMAZON.StreetAddress",
+                            "samples": [
+                                "serial number is {serialNumber}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "activate this device {serialNumber}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ServiceNameIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Service_name",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.742114496358.1222860658611"
+                            }
+                        },
+                        {
+                            "name": "device_name",
+                            "type": "AMAZON.PostalAddress",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.339852894498.465427602855"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.1469626613055.1064763010148.809773161780",
+                                    "values": [
+                                        "ios-3",
+                                        "iosxr-3",
+                                        "ios-2",
+                                        "iosxr-2",
+                                        "ios-1",
+                                        "ios-0",
+                                        "iosxr-1",
+                                        "iosxr-0"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "ip_address",
+                            "type": "AMAZON.PostalAddress",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.642471667517.652727897246"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.1010068460467.1364170158819.611356595746",
+                                    "values": [
+                                        "10.0.0.4",
+                                        "10.0.0.3",
+                                        "10.0.0.5",
+                                        "10.0.0.2",
+                                        "10.0.0.1"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pw_id",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.301140756921.399038977472"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isLessThan",
+                                    "prompt": "Slot.Validation.978127148640.477239444262.461214473916",
+                                    "value": "10099"
+                                },
+                                {
+                                    "type": "isGreaterThan",
+                                    "prompt": "Slot.Validation.978127148640.477239444262.889138884144",
+                                    "value": "1001"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "interface_number",
+                            "type": "AMAZON.PostalAddress",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1385494777623.681057931250"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.358149360040.46740285946.981594555814",
+                                    "values": [
+                                        "0 1",
+                                        "0 2",
+                                        "0 3",
+                                        "0 4",
+                                        "0 5",
+                                        "0 0 0 1",
+                                        "0 0 0 3",
+                                        "0 0 0 2",
+                                        "0 0 0 5",
+                                        "0 0 0 4"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "device_no",
+                            "type": "AMAZON.PostalAddress",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1374987203194.824227764157"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.1469626613055.991413585683.1383000403950",
+                                    "values": [
+                                        "ios-3",
+                                        "iosxr-3",
+                                        "ios-2",
+                                        "iosxr-2",
+                                        "ios-1",
+                                        "ios-0",
+                                        "iosxr-1",
+                                        "iosxr-0"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "loopback_ip",
+                            "type": "AMAZON.PostalAddress",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1385494777623.984736163265"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.1010068460467.985781632105.698625240285",
+                                    "values": [
+                                        "10.0.0.8",
+                                        "10.0.0.7",
+                                        "10.0.0.9",
+                                        "10.0.0.6"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "interface_no",
+                            "type": "AMAZON.PostalAddress",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1385494777623.816920466081"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isInSet",
+                                    "prompt": "Slot.Validation.1469626613055.1172478812709.262895340231",
+                                    "values": [
+                                        "0 1",
+                                        "0 2",
+                                        "0 3",
+                                        "0 4",
+                                        "0 5",
+                                        "0 0 0 1",
+                                        "0 0 0 3",
+                                        "0 0 0 2",
+                                        "0 0 0 5",
+                                        "0 0 0 4"
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "DeleteserviceIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "delete_service",
+                            "type": "AMAZON.FirstName",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.99063286585.549363869336"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SddevdevicelicenseinfoIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "serialNumber",
+                            "type": "AMAZON.StreetAddress",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1330859175916.768250341224"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.742114496358.1222860658611",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is your service name ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.803298174867.1021891114031",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is ip address?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is your ip address?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.803298174867.697595189283",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is your sudo id ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "what is sudo id?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.301140756921.399038977472",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is the pw-id ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "what is pw-id ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1385494777623.1503680351080",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is remote ip address ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "what is your remote ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1385494777623.984736163265",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is loopback ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1385494777623.681057931250",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is remote interface number ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1385494777623.816920466081",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is your destination interface number ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.274066623413.367450631301",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is remote ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.274066623413.1239752027746",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is remote ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.274066623413.818586063555",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is remote ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.274066623413.757314408515",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is remote ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.83144448439.1357430633517",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is remote ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.83144448439.342801316430",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is remote ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.83144448439.1048816818803",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is remote ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.642471667517.652727897246",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is remote ip address ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.339852894498.465427602855",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is source device name ?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1374987203194.824227764157",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please select destination device name"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.99063286585.549363869336",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is your service name ?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1010068460467.1364170158819.611356595746",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide a valid address only  "
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1010068460467.985781632105.698625240285",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide valid loopback ip address only."
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.978127148640.477239444262.461214473916",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide valid pw-id only"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.978127148640.477239444262.889138884144",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide valid pw-id range"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.358149360040.46740285946.981594555814",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide valid interface number"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1469626613055.1172478812709.262895340231",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide valid destination interface number only"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1469626613055.991413585683.1383000403950",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide available device only"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1469626613055.1064763010148.809773161780",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please provide valid available devices only"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1330859175916.768250341224",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is serial number of this device"
+                    }
+                ]
+            }
+        ]
+    }
+}
